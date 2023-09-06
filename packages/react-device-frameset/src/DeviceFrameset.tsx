@@ -44,7 +44,7 @@ export const DeviceFrameset = React.memo<DeviceFramesetProps>(
                     <div className="speaker" />
                 </div> : null}
                 <div className="top-bar" />
-                <div className="sleep" />
+                <div className="sleep" onClick={props.onSleepClick} />
                 <div className="bottom-bar" />
                 <div className="volume" />
                 <div className="camera" />

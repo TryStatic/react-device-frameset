@@ -123,4 +123,8 @@ type DevicesType<R extends Record<string, DeviceType<string, readonly string[]>>
     }, never>>>
 }[keyof R]
 
-export type DeviceFramesetProps = DevicesType<typeof DeviceOptions> & React.HTMLAttributes<HTMLDivElement>
+export interface Handlers {
+    onSleepClick?: () => void;
+}
+
+export type DeviceFramesetProps = DevicesType<typeof DeviceOptions> & Handlers & React.HTMLAttributes<HTMLDivElement>
